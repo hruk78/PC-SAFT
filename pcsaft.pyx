@@ -2,6 +2,17 @@
 # setuptools: language=c++
 
 import numpy as np
+#to work with numpy=>2.0.0
+np.float_ = np.float64
+
+#to do
+#current_version = version.parse(np.__version__)
+#if current_version >= version.parse("2.0.0"):
+    #replace old type by new one
+#   np.float_ = np.float64
+#else:
+#    # do nothing
+
 from libcpp.vector cimport vector
 from copy import deepcopy
 cimport pcsaft
